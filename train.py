@@ -5,7 +5,6 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
-# 强制将大作业路径加入搜索范围，解决 ModuleNotFoundError
 BASE_DIR = "/Users/Administrator/Desktop/大数据大作业"
 if BASE_DIR not in sys.path:
     sys.path.append(BASE_DIR)
@@ -55,7 +54,6 @@ def main():
     plt.legend()
     plt.grid(True, alpha=0.3)
     
-    # 确保图片存在该目录下
     save_path = os.path.join(BASE_DIR, "final_result.png")
     plt.savefig(save_path)
     print(f"分析结果图已保存至: {save_path}")
